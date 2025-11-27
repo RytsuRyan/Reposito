@@ -1,0 +1,17 @@
+name: Start Server
+
+on:
+  workflow_dispatch:
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Start server
+        run: |
+          echo "🚀 Iniciando servidor..."
+          npm install
+          npm start
